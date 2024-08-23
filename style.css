@@ -1355,6 +1355,27 @@ input.form-control, select.form-control {
 /*--------------------------------------------------------------
 ## Main Header
 --------------------------------------------------------------*/
+.logo-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Menghapus garis bawah pada link */
+}
+
+.logo-brand a {
+  display: flex;
+  align-items: center;
+  color: #333; /* Ganti warna sesuai kebutuhan */
+}
+
+.logo-img {
+  width: 150px; /* Ukuran logo bisa disesuaikan */
+  height: auto;
+}
+
+.logo-text {
+  font-size: 25px; /* Ukuran teks bisa disesuaikan */
+  font-weight: bold; /* Atau sesuaikan sesuai kebutuhan */
+}
 .main-navigation {
   text-align: right;
   margin-top: -1px;
@@ -2068,9 +2089,6 @@ p .btn-submit {
 .wpcf7-submit {
   width: 170px;
   margin-right: 10px;
-}
-.map {
-  margin-bottom: 60px;
 }
 .text-center {
   text-align: center;
