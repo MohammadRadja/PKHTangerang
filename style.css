@@ -494,8 +494,20 @@ mark, ins {
   text-decoration: none;
 }
 
-.text-light {
-  color: #b7b7b7;
+.bg-light {
+  background-color: #f8f9fa; /* Warna latar belakang terang */
+  border: 1px solid #e0e0e0; /* Garis batas abu-abu terang */
+  border-radius: 8px; /* Sudut melengkung untuk tampilan yang lebih halus */
+  padding: 15px; /* Ruang dalam di sekitar konten */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Bayangan halus untuk efek kedalaman */
+}
+
+/* Menambahkan efek hover untuk interaksi pengguna */
+.bg-light:hover {
+  background-color: #e2e6ea; /* Warna latar belakang saat hover (sedikit lebih gelap) */
+  border-color: #d6d6d6; /* Warna garis batas saat hover */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Transisi halus saat hover */
 }
 .bg-transparent{
   background: transparent;
@@ -951,8 +963,20 @@ td {
   text-decoration: none;
 }
 .btn-primary {
-  background-color: #ffff;
-  color: #272023;
+  background: linear-gradient(45deg, #0097b2, #00bcd4); /* Gradient untuk efek menarik */
+  color: #fff; /* Teks putih */
+  border: none; /* Tanpa border */
+  border-radius: 12px; /* Ubah menjadi sudut yang lebih halus */
+  padding: 10px 20px; /* Tambahkan padding untuk kenyamanan */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek 3D */
+  transition: all 0.3s ease; /* Transisi lebih halus */
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background: linear-gradient(45deg, #00bcd4, #0097b2); /* Balik gradient saat hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Bayangan lebih dalam saat hover */
+  transform: translateY(-3px); /* Sedikit angkat tombol saat di-hover */
+  color: #fff; /* Teks tetap putih */
 }
 .btn-whatsapp-scroll{
   position: fixed;
@@ -994,49 +1018,6 @@ td {
 .btn-emergency:hover {
   background-color: #d43f3f; /* Warna merah lebih gelap saat hover */
   color: #fff; /* Teks tetap putih */
-}
-.btn-default {
-  background-color: #f2f4f6;
-  color: #03132b;
-}
-.btn-default:hover{
-  background-color: #ffff;
-  color: #03132b;
-}
-.btn-dark {
-  background: #000;
-}
-.btn-dark:hover, .btn-dark:focus {
-  background: #f26522;
-  color: #fff;
-}
-.btn-white {
-  background-color: #fff;
-  color: #252525;
-}
-.btn-dark:hover, .btn-dark:focus {
-  background: #03132b;
-  color: #fff;
-}
-.btn.btn-border {
-  background: transparent;
-  border-color: #363636;
-  color: #707070;
-}
-.btn.btn-border:hover, .btn.btn-border:focus {
-  background: #ffff;
-  border-color: #ffff;
-  color: #03132b;
-}
-.btn-border-white {
-  background-color: transparent;
-  border-color: #ffffff;
-  color: #ffffff;
-}
-.btn-border-white:hover {
-  background-color: transparent;
-  border-color: #ffff;
-  color: #ffff;
 }
 
 input[type=text],
@@ -2077,38 +2058,146 @@ p .btn-submit {
 /*--------------------------------------------------------------
 ## Contact Us
 --------------------------------------------------------------*/
-.bg-contact-info {
-  background-color: #f2f4f6;
+@media (max-width: 768px) {
+  #contact{
+    display: none;
+  }
+  .contact-item {
+    display: flex;
+    flex-direction: inline-block;
+    align-items: center;
+    text-decoration: none; /* Hapus garis bawah dari link */
+    color: #272023; /* Warna teks default */
+    padding: 15px;
+    border-radius: 8px; /* Sudut melengkung untuk efek modern */
+    transition: background-color 0.3s, color 0.3s;
+    margin: auto;
+  }
+  .contact-form .form-group {
+    text-align: center;
+  }
+  .contact-form h3{
+    text-align: center;
+  }
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    margin: 20px 20px;
+  }
 }
-.contact-info h2 {
-  font-weight: 900;
-  line-height: 1;
-  margin-bottom: 40px;
+.btn {
+  margin-top: 10px;
 }
-.contact-info p {
-  margin-bottom: 12px;
-}
-.contact-info i {
-  color: #ffff;
-}
-.form-group input, .form-group textarea, .form-group select {
-  margin-bottom: 30px;
-}
-.form-group select {
-  height: auto;
-  font-weight: 500;
-}
-.wpcf7-submit {
-  width: 170px;
-  margin-right: 10px;
-}
-.text-center {
-  text-align: center;
-}
-.btn-m-r {
-  margin-right: 10px;
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* Hapus garis bawah dari link */
+  color: #272023; /* Warna teks default */
+  padding: 15px;
+  border-radius: 8px; /* Sudut melengkung untuk efek modern */
+  transition: background-color 0.3s, color 0.3s;
+  margin: auto;
 }
 
+.contact-item i {
+  margin-bottom: 10px; /* Jarak antara ikon dan teks */
+}
+
+.contact-item:hover {
+  background-color: #fff; 
+  color: white;
+}
+
+.map-container {
+  border-radius: 25px; /* Sudut melengkung pada map */
+  overflow: hidden; /* Menghapus overflow untuk sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+}
+
+/* Style untuk kontainer form */
+.contact-form {
+  background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+  padding: 30px; /* Padding di sekitar form */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow lembut */
+}
+
+/* Style untuk label */
+.form-group label {
+  display: block; /* Label menjadi blok */
+  margin-bottom: 5px; /* Jarak bawah label */
+  font-weight: bold; /* Font tebal */
+  color: #555; /* Warna teks label */
+}
+
+.form-control {
+  width: 100%; /* Lebar penuh */
+  padding: 10px; /* Padding di dalam field */
+  border: 1px solid #ddd; /* Border abu-abu muda */
+  border-radius: 5px; /* Sudut melengkung */
+  box-sizing: border-box; /* Menghitung padding dalam lebar field */
+  margin-bottom: 15px; /* Jarak bawah dari field */
+  transition: border-color 0.3s; /* Transisi warna border */
+}
+
+.form-control:focus {
+  border-color: #0097b2; /* Warna border saat fokus */
+  outline: none; /* Menghapus outline default */
+}
+/*--------------------------------------------------------------
+## FAQ
+--------------------------------------------------------------*/
+.faq-section {
+  background-color: #f9f9f9; /* Warna latar belakang section */
+  padding: 40px 0; /* Ruang atas dan bawah */
+}
+
+.faq-item {
+  background-color: #ffffff; /* Warna latar belakang FAQ item */
+  border: 1px solid #e0e0e0; /* Garis batas */
+  border-radius: 8px; /* Sudut melengkung */
+  padding: 20px; /* Ruang dalam */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+  transition: box-shadow 0.3s ease; /* Transisi bayangan saat hover */
+}
+
+.faq-item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Bayangan lebih dalam saat hover */
+}
+
+.faq-header {
+  border-bottom: 2px solid #ddd; /* Garis bawah header */
+  padding-bottom: 10px; /* Ruang bawah header */
+  text-align: center;
+}
+
+.faq-header i {
+  color: #3f417e; /* Warna ikon */
+}
+
+.faq-header h3 {
+  margin: 0; /* Menghapus margin default */
+  font-size: 1.5rem; /* Ukuran font header */
+}
+
+.faq-item h4 {
+  color: #333; /* Warna teks judul pertanyaan */
+}
+
+.faq-item p {
+  color: #666; /* Warna teks paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+}
+
+@media (max-width: 768px) {
+  .faq-item {
+    padding: 15px; /* Mengurangi padding di perangkat kecil */
+  }
+}
 /*--------------------------------------------------------------
 ## About Us
 --------------------------------------------------------------*/
@@ -2929,6 +3018,10 @@ div:last-child >.process .process-icon:after {
   }
 
   .home-content .home-text h1,h4 {
+    text-align: center;
+  }
+
+  .home-content .home-text h1,h2 {
     display: none;
   }
 
@@ -3270,6 +3363,56 @@ div:last-child >.process .process-icon:after {
 .slick-feature-project .next-nav.slick-arrow {
   right: auto;
   left: 260px;
+}
+/*--------------------------------------------------------------
+## Reservasi
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    margin: 20px 20px;
+  }
+}
+.custom-card {
+  border-radius: 10px;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
+.custom-card .card-body {
+  padding: 2rem;
+}
+
+.custom-input {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 150px;
+  transition: border-color 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.custom-textarea {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.custom-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.font-weight-bold {
+  font-weight: 700;
 }
 /*--------------------------------------------------------------
 ## Typo
