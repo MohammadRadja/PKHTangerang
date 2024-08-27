@@ -207,44 +207,50 @@
 			</div>
 	  <!-- Hero Section End  -->
 
-    <!-- Contact Information Start -->
-    <section class="padding-bottom-medium">
-      <div id="contact" class="container">
-        <div class="row text-center">
-          <div class="col-md-2">
-            <a href="tel:+123456789" class="contact-item">
-              <i class="fas fa-phone fa-3x text-primary-secondary"></i>
-              <h4 class="text-primary-quinary">Telepon</h4>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="mailto:example@example.com" class="contact-item">
-              <i class="fab fa-whatsapp fa-3x text-primary-secondary"></i>
-              <h4 class="text-primary-quinary">WhatsApp</h4>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="https://wa.me/123456789" class="contact-item">
-              <i class="fab fa-facebook-f fa-3x text-primary-secondary"></i>
-              <h4 class="text-primary-quinary">Facebook</h4>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="https://facebook.com" class="contact-item">
-              <i class="fab fa-instagram fa-3x text-primary-secondary"></i>
-              <h4 class="text-primary-quinary">Instagram</h4>
-            </a>
-          </div>
-          <div class="col-md-2">
-            <a href="https://instagram.com" class="contact-item">
-              <i class="fas fa-envelope fa-3x text-primary-secondary"></i>
-              <h4 class="text-primary-quinary">Email</h4>
-            </a>
-          </div>
+   <!-- Contact Information Start -->
+   <section class="padding-bottom-medium">
+    <div id="contact" class="container">
+      <div class="row mb-4">
+        <div class="col-md-12 text-center">
+          <h4 class="text-primary-secondary">Our Contact Information</h4>
+          <h2 class="no-margin-bottom">Get in Touch</h2>
         </div>
       </div>
-    </section>
-    <!-- Contact Information End -->
+      <div class="row">
+        <div class="col-md-2">
+          <a href="tel:+123456789" class="contact-item d-flex flex-column align-items-center text-center">
+            <i class="fas fa-phone fa-3x text-primary-secondary"></i>
+            <h4 class="text-primary-quinary mt-2">Telepon</h4>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="mailto:example@example.com" class="contact-item d-flex flex-column align-items-center text-center">
+            <i class="fab fa-whatsapp fa-3x text-primary-secondary"></i>
+            <h4 class="text-primary-quinary mt-2">WhatsApp</h4>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://wa.me/123456789" class="contact-item d-flex flex-column align-items-center text-center">
+            <i class="fab fa-facebook-f fa-3x text-primary-secondary"></i>
+            <h4 class="text-primary-quinary mt-2">Facebook</h4>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://facebook.com" class="contact-item d-flex flex-column align-items-center text-center">
+            <i class="fab fa-instagram fa-3x text-primary-secondary"></i>
+            <h4 class="text-primary-quinary mt-2">Instagram</h4>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://instagram.com" class="contact-item d-flex flex-column align-items-center text-center">
+            <i class="fas fa-envelope fa-3x text-primary-secondary"></i>
+            <h4 class="text-primary-quinary mt-2">Email</h4>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Contact Information End -->
 
     <!-- Contact Form Start -->
     <section class="no-padding-top">
@@ -252,26 +258,37 @@
         <div class="row">
           <div class="col-md-8">
             <h3 class="text-primary-secondary">Kirimkan Pesan Kepada Kami</h3>
-            <form action="contact_process.php" method="POST">
+            <form id="contactForm">
               <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
+                <label for="name">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Masukkan nama lengkap Anda" required>
+                <div id="nameError" class="error-message" style="display: none;">
+                  <i class="fas fa-exclamation-circle"></i> Nama hanya boleh berisi huruf dan spasi.
+                </div>
               </div>
               <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="telp">Nomor Telepon</label>
+                <input type="telp" class="form-control" id="telp" name="telp" placeholder="Masukkan nomor telepon Anda" required>
+                <div id="telpError" class="error-message" style="display: none;">
+                  <i class="fas fa-exclamation-circle"></i> Nomor telepon harus berisi angka dan minimal 10 digit.
+                </div>
               </div>
               <div class="form-group">
-                <label for="subject">Subjek</label>
-                <input type="text" class="form-control" id="subject" name="subject" required>
+                <label for="subject">Subjek Pesan</label>
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subjek pesan Anda" required>
+                <div id="subjectError" class="error-message" style="display: none;">
+                  <i class="fas fa-exclamation-circle"></i> Subjek harus minimal 3 karakter.
+                </div>
               </div>
               <div class="form-group">
                 <label for="message">Pesan</label>
-                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-              </div>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tulis pesan atau saran Anda di sini" required></textarea>
+                <div id="messageError" class="error-message" style="display: none;">
+                  <i class="fas fa-exclamation-circle"></i> Pesan harus minimal 10 karakter.
+                </div>              </div>
               <div class="button-group">
-              <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-            </div>
+                <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+              </div>
             </form>
           </div>
           <div class="col-md-4">
@@ -284,7 +301,6 @@
       </div>
     </section>
     <!-- Contact Form End -->
-	    
 
 	    <!-- Main Footer Start -->
       <footer id="site-footer" class="site-footer bg-primary d-flex flex-column min-vh-100">
@@ -385,5 +401,61 @@
 <script src="js/jquery.magnific-popup.min.js"></script>
 <script src="js/jquery.isotope.min.js"></script>
 <script src="js/scripts.js"></script>
+<script>
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      var name = document.getElementById('name').value;
+      var telp = document.getElementById('telp').value;
+      var subject = document.getElementById('subject').value;
+      var message = document.getElementById('message').value;
+      
+      var isValid = true;
+
+      // Validasi nama hanya huruf
+      if (!/^[a-zA-Z\s]+$/.test(name)) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('nameError').style.display = 'none';
+      }
+
+      // Validasi nomor telepon harus angka dan minimal 10 digit
+      if (!/^\+?[0-9]{10,13}$/.test(telp)) {
+        document.getElementById('telpError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('telpError').style.display = 'none';
+      }
+
+      // Validasi subjek minimal 3 karakter
+      if (subject.length < 3) {
+        document.getElementById('subjectError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('subjectError').style.display = 'none';
+      }
+
+      // Validasi pesan minimal 10 karakter
+      if (message.length < 10) {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+      } else {
+        document.getElementById('messageError').style.display = 'none';
+      }
+
+      // Jika semua validasi berhasil, lanjutkan ke proses pengiriman
+      if (isValid) {
+        var whatsappMessage = `https://wa.me/6287728152100?text=` +
+          `🐾 *Laporan Kritik dan Saran - Pusat Kesembuhan Hewan Tangerang* 🐾%0A%0A` +
+          `*Nama Pengirim:* ${encodeURIComponent(name)}%0A` +
+          `*Nomor Telepon:* ${encodeURIComponent(telp)}%0A` +
+          `*Subjek:* ${encodeURIComponent(subject)}%0A%0A` +
+          `*Pesan:*%0A${encodeURIComponent(message)}%0A%0A`;
+        
+        window.open(whatsappMessage, '_blank');
+      }
+    });
+</script>
 </body>
 </html>

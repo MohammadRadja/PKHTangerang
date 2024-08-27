@@ -2148,6 +2148,34 @@ p .btn-submit {
   border-color: #0097b2; /* Warna border saat fokus */
   outline: none; /* Menghapus outline default */
 }
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.error-message i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /*--------------------------------------------------------------
 ## FAQ
 --------------------------------------------------------------*/
@@ -3021,7 +3049,7 @@ div:last-child >.process .process-icon:after {
     text-align: center;
   }
 
-  .home-content .home-text h1,h2 {
+  .home-content .home-text p,h3 {
     display: none;
   }
 
@@ -3055,12 +3083,22 @@ div:last-child >.process .process-icon:after {
   position: relative; 
   text-align: center;
 }
+.home-image {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
 .home-content .home-text{
   position: absolute; 
   top: 50%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
   color: white;
+}
+.home-content .home-text p{
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
 }
 .slider .slider-content {
   position: absolute; 
