@@ -1205,7 +1205,7 @@ input.form-control, select.form-control {
   color: #707070;
   display: table-cell;
   width: 100%;
-  padding: 16px 20px;
+  padding: 5px 20px;
   border-radius: 0;
 }
 .input-group-btn {
@@ -2097,7 +2097,7 @@ p .btn-submit {
   align-items: center;
   text-decoration: none; /* Hapus garis bawah dari link */
   color: #272023; /* Warna teks default */
-  padding: 15px;
+  padding: 25px;
   border-radius: 8px; /* Sudut melengkung untuk efek modern */
   transition: background-color 0.3s, color 0.3s;
   margin: auto;
@@ -2221,6 +2221,12 @@ p .btn-submit {
   line-height: 1.6; /* Jarak antar baris */
 }
 
+.faq-item ul li {
+  color: #666; /* Warna teks paragraf */
+  line-height: 1.6; /* Jarak antar baris */
+  margin-bottom: 5px; /* Jarak bawah */
+}
+
 @media (max-width: 768px) {
   .faq-item {
     padding: 15px; /* Mengurangi padding di perangkat kecil */
@@ -2231,6 +2237,15 @@ p .btn-submit {
 --------------------------------------------------------------*/
 .circle-img {
   border-radius: 50%;
+}
+.card {
+  position: relative;
+  overflow: hidden;
+}
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .about-img-small {
   position: relative;
@@ -3406,33 +3421,58 @@ div:last-child >.process .process-icon:after {
 ## Reservasi
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
-  .button-group {
+  .button-group .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .btn {
     margin: 20px 20px;
   }
 }
 .custom-card {
-  border-radius: 10px;
+  border-radius: 15px;
   border: 1px solid #dee2e6;
   background-color: #f8f9fa;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  padding: 40px;
 }
 
 .custom-card .card-body {
   padding: 2rem;
+}
+.form-group {
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group:hover {
+  transform: scale(1.02);
 }
 
 .custom-input {
   border-radius: 5px;
   border: 1px solid #ced4da;
   padding: 150px;
+  position: relative;
   transition: border-color 0.3s ease;
 }
+.custom-input::before {
+  content: attr(data-icon);
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: "FontAwesome";
+  font-size: 18px;
+  color: #007bff;
+}
+.custom-input,
+.custom-textarea,
+.custom-btn {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
-.custom-input:focus {
+.custom-input:focus,
+.custom-textarea:focus {
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
 }
@@ -3448,9 +3488,11 @@ div:last-child >.process .process-icon:after {
   border-color: #007bff;
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
 }
-
 .font-weight-bold {
   font-weight: 700;
+  background: linear-gradient(90deg, #007bff 0%, #6c757d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*--------------------------------------------------------------
 ## Typo
