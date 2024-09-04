@@ -1811,9 +1811,6 @@ p .btn-submit {
 ## Contact Us
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
-  #contact{
-    display: none;
-  }
   .contact-item {
     display: flex;
     flex-direction: inline-block;
@@ -1959,15 +1956,6 @@ p .btn-submit {
   color: #3f417e; /* Warna ikon */
 }
 
-.faq-header h3 {
-  margin: 0; /* Menghapus margin default */
-  font-size: 1.5rem; /* Ukuran font header */
-}
-
-.faq-item h4 {
-  color: #333; /* Warna teks judul pertanyaan */
-}
-
 .faq-item p {
   color: #666; /* Warna teks paragraf */
   line-height: 1.6; /* Jarak antar baris */
@@ -1997,7 +1985,7 @@ p .btn-submit {
 .card img {
   object-fit: cover;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .about-img-small {
   position: relative;
@@ -2517,10 +2505,11 @@ div:last-child >.process .process-icon:after {
 --------------------------------------------------------------*/
 
 .services-box {
-  padding: 50px 30px; 
+  padding:25px 30px 0 ; 
   background-color: #ffffff; 
   margin-bottom: 30px; 
   border: 1px solid #cccccc;
+  border-radius: 25px;
   transition: all .3s linear;-
   webkit-transition: all .3s linear;-
   moz-transition: all .3s linear;
@@ -2814,8 +2803,12 @@ div:last-child >.process .process-icon:after {
     text-align: center;
   }
 
-  .home-content .home-text p,h3 {
+  .home-content .home-text p {
     display: none;
+  }
+
+  h3 {
+    text-align: center;
   }
 
   .home-content .home-text .btn {
@@ -3268,50 +3261,6 @@ div:last-child >.process .process-icon:after {
 .services-box-img-hover img {
   transform: scale(1.1);
 }
-.services-box-3 {
-  padding:25px 30px 0 ; 
-  background-color: #1c5e9f;
-  border-bottom: 5px solid #ffff; 
-  transition: 0.3s; 
-  margin-bottom: 60px;
-}
-.services-box-3:hover {
-  background-color: #ffffff;
-}
-.services-box-3 h4 {
-  margin-bottom: 15px;
-}
-.services-box-3:hover h4 a {
-  color: #252525;
-}
-.services-box-3:hover i {
-  color: #ffff;
-}
-.services-box-3 h4 a{
-  font-size: 18px; 
-  color: #fff; 
-  line-height: 26px;
-}
-.services-box-3 .view-detail {
-  color: #b7b7b7; 
-  font-size: 24px;
-}
-.services-box-3 a:hover, .services-box-3 .view-detail:hover{
-  color: #ffff;
-}
-.services-box-3 .services-icon {
-  text-align: right;
-}
-.services-box-3-hover {
-  border-color: #ffff;
-  background-color: #fff;
-}
-.services-box-3-hover h4 a  {
-  color: #252525;
-}
-.services-box-3-hover i {
-  color: #ffff;
-}
 
 /*--------------------------------------------------------------
 ## Counter
@@ -3334,157 +3283,6 @@ div:last-child >.process .process-icon:after {
 }
 .counter-box h3 {
   margin-bottom: 0;
-}
-/*--------------------------------------------------------------
-## login    
---------------------------------------------------------------*/
-.login-form {
-  padding: 30px; 
-  background-color: #f2f4f6;
-}
-.login-form label {color: #b7b7b7;}
-.login-form input[type="checkbox"], .bill-form input[type="checkbox"] {
-  width: 20px; 
-  height: 20px; 
-  border: 1px solid #ccc; 
-  border-radius: 1px; 
-  background: #fff;
-  color: #252525;
-  clear: none;
-  cursor: pointer;
-  display: inline-block;
-  line-height: 0;
-  outline: 0;
-  margin-top: -4px;
-  margin-right: 10px;
-  padding: 0!important;
-  text-align: center;
-  vertical-align: middle;
-  min-width: 16px;
-  -webkit-appearance: none;
-  -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-  box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-  -webkit-transition: .05s border-color ease-in-out;
-  transition: .05s border-color ease-in-out;
-}
-.checkbox-remember, .bill-checkbox {
-    position: relative; 
-    display: inline;
-}
-input[type=checkbox]:checked:after { 
-  content: '';
-  position: absolute;
-  width: 12px;
-  height: 8px;
-  background: transparent;
-  top: 2px;
-  left: -6px;
-  border: 3px solid #252525;
-  border-top: none;
-  border-right: none;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-#rememberme {
-  color: #b7b7b7;
-}
-.login-form .btn {
-  margin-right: 20px;
-}
-.lost-password {
-  color: #ffff; 
-  font-weight: 500;
-}
-/*--------------------------------------------------------------
-## Events
---------------------------------------------------------------*/
-.events-sidebar .input-group {
-  display: block;
-}
-.events-box .width-auto {
-  min-width: auto; 
-  font-weight: bolder;
-}
-.events-box .btn-border {
-  border-color: #e3e3e3;
-}
-.events-content {
-  padding: 30px; 
-  border: 1px solid #e1e1e1; 
-  margin-bottom: 30px;
-}
-.events-box:last-child .events-content {
-  margin-bottom: 0;
-}
-.events-time {
-  color: #707070; 
-  font-weight: 500; 
-  margin-bottom: 20px;
-}
-.btn.free {
-  color: #ffff;
-}
-.events-box .btn {
-  margin-right: 10px;
-}
-.events-box .btn:last-child {
-  margin-right: 0;
-}
-.register-form input[type="text"], .register-form input[type="email"] {
-  background-color: #f2f4f6;
-}
-.register-form input::placeholder {
-  color: #707070;
-}
-/*--------------------------------------------------------------
-## 404
---------------------------------------------------------------*/
-.page-404 {
-  min-height: 1080px; 
-  padding-top: 260px;
-}
-.page-404 h1 {
-  margin-bottom: 0; 
-  line-height: 100px;
-}
-.page-404 h1 i {
-  margin: 0 18px;
-}
-.page-404 h3 {
-  line-height: 42px; 
-  margin-bottom: 15px;
-}
-.page-404 hr {
-  margin-top: 10px;
-}
-/*--------------------------------------------------------------
-## Cming soon
---------------------------------------------------------------*/
-.coming-soon {
-  padding: 115px 0;
-}
-.coming-soon-content {
-  padding-top: 150px; 
-  padding-bottom: 180px;
-}
-.coming-soon-subtitle {
-  margin-bottom: 30px;
-}
-.coming-soon-info {
-  color: #b7b7b7; 
-  list-style: none;
-}
-.coming-soon-info i {
-  margin-right: 8px;
-  color: #ffff;
-  font-size: 20px;
-  line-height: 26px;
-}
-.coming-soon-form input::placeholder {
-  color: #707070;
 }
 /*--------------------------------------------------------------
 ## Gallery
@@ -4071,7 +3869,6 @@ table .cart-subtotal {
   }
   .mobile-header {
     display: block;
-    background-color: #fff;
   }
   .logo-brand-mobile {
     max-width: 100px;
@@ -4189,7 +3986,7 @@ table .cart-subtotal {
     margin-top: 20px;
   }
   .mobile-header .mobile-nav .mobile-menu > li.menu-item-has-children .arrow {
-    color: #000;
+    color: #fff;
     position: absolute;
     display: block;
     right: 0;
@@ -4418,7 +4215,44 @@ table .cart-subtotal {
     margin-bottom: 20px;
   }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
+  /* Gaya Navigasi Mobile */
+  
+  /* Menyorot item menu yang sedang aktif dan saat di-hover */
+  .mobile-nav ul li.current-menu-parent > a, 
+  .mobile-nav ul li a:hover {
+    color: #fff;
+  }
+
+  /* Indikator panah untuk item menu yang memiliki sub-menu */
+  .mobile-nav > ul > li.menu-item-has-children > a:after {
+    display: inline-block;
+    margin: 0 15px 0 4px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    color: #fff;
+  }
+
+  /* Gaya untuk item submenu */
+  .mobile-nav ul ul li.current_page_item a,
+  .mobile-nav ul ul li.menu-item-has-children > a:hover:after {
+    color: #fff;
+  }
+
+  /* Indikator panah untuk submenu yang memiliki anak */
+  .mobile-nav ul ul li.menu-item-has-children > a:after {
+    position: absolute;
+    top: 30px;
+    right: 25px;
+    font-family: 'FontAwesome';
+    font-weight: 900;
+    font-size: 13px;
+    transform: rotate(-90deg);
+    content: "\f107";
+    color: #fff;
+  }
+
   section {
     padding: 90px 0;
   }
